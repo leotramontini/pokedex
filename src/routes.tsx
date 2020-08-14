@@ -1,12 +1,12 @@
 import React from 'react'
 import { BrowserRouter, Route } from 'react-router-dom'
 
-import Menu from './pages/Menu'
+import Landing from './pages/Landing'
 
 function Routes() {
   return (
     <BrowserRouter>
-      <Route path='/' exact component={Menu} />
+      <Route path='/' exact component={Landing} />
     </BrowserRouter>
   )
 }
