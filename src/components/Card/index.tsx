@@ -10,6 +10,7 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({ url }) => {
 
     const [ pokemon, setPokemon ] = useState({
+        id: null,
         name: null,
         types: [
             {
@@ -42,7 +43,7 @@ const Card: React.FC<CardProps> = ({ url }) => {
     return (
         <>
         <Container>
-            <TextName>{pokemon.name}</TextName>
+            <TextName>{pokemon.name} -  # {pokemon.id}</TextName>
             <DescriptionContainer>
                 <TypesContainer>
                     { pokemon.types.map((type: any) => {

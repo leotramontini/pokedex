@@ -15,7 +15,7 @@ const List: React.FC = () => {
     const [ pokemons, setPokemons ] = useState([])
     
     async function getPokemon() {
-        const response = await api.get('https://pokeapi.co/api/v2/pokemon?limit=18')
+        const response = await api.get('https://pokeapi.co/api/v2/pokemon')
         setPokemons(response.data.results)
     }
 
