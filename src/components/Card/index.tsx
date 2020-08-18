@@ -1,19 +1,55 @@
-import React from 'react'
-import Vibrant from 'node-vibrant'
+import React, { useState, useEffect } from 'react'
+import api from '../../services/api'
 
 import { Container, PokemonImage, DescriptionContainer, TypesContainer, TypeItem, TextName } from './styles'
 
-const Card: React.FC = () => {
+interface CardProps {
+    url: string;
+}
+
+const Card: React.FC<CardProps> = ({ url }) => {
+
+    const [ pokemon, setPokemon ] = useState({
+        name: null,
+        types: [
+            {
+                slot: null,
+                type: {
+                    name: null
+                }
+            }
+        ],
+        sprites: {
+            front_default: ''
+        }
+    })
+
+    async function getPokemon(url: string){
+        const response = await api.get(url)
+        setPokemon(response.data)
+    }
+
+    const getType = (type: any) => {
+        return (
+            <TypeItem key={ type.slot }> { type.type.name } </TypeItem>
+        )
+    }
+
+    useEffect(() => {
+        getPokemon(url)
+    })
+
     return (
         <>
         <Container>
-            <TextName>Bulbasaur</TextName>
+            <TextName>{pokemon.name}</TextName>
             <DescriptionContainer>
                 <TypesContainer>
-                    <TypeItem>Grass</TypeItem>
-                    <TypeItem>Poison</TypeItem>
+                    { pokemon.types.map((type: any) => {
+                        return getType(type)
+                    })}
                 </TypesContainer>
-                <PokemonImage src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"/>
+                <PokemonImage src={pokemon.sprites.front_default}/>
             </DescriptionContainer>
         </Container>
         </>

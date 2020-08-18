@@ -1,18 +1,20 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-    width: 18rem;
-    height: 18rem;
+    width: 14rem;
+    height: 14rem;
+    margin: 1.0rem;
     border-radius: 10%;
 
     display:flex;
     justify-content:center;
     align-items:center;
     flex-direction: column;
-
+    
     @media(max-width: 770px) {
         width: 16rem;
         height: 16rem;
+        margin: 1.0rem 0;
     }
     
     /* background-color: #D7D9D8; */
@@ -21,12 +23,12 @@ export const Container = styled.div`
 export const TextName = styled.h1`
     padding-top: 1.0rem;
     font: 700 1.4rem PT Sans;
+    text-transform:capitalize;
 `
 
 export const PokemonImage = styled.img`
-    width: 10rem;
-    min-width: 10rem;
-    height: 12rem;
+    width: 9rem;
+    height: 9rem;
 
     @media(max-width: 770px) {
         width: 9rem;
@@ -50,11 +52,10 @@ export const TypesContainer = styled.div`
 
 export const TypeItem = styled.h1`
     text-align:center;
-    font: 400 1.2rem PT Sans;
+    font: 400 0.9rem PT Sans;
+    text-transform:capitalize;
 
-    width: 4.7rem;
-
+    width: 3rem;
     border-radius:10%;
     background-color: #EFF1F0;
-    
 `

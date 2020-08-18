@@ -1,5 +1,14 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-    width: 100%;
+    max-width: calc(100vw - 30px);
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    
+    @media(max-width: 700px) {
+        padding: 10px 0;
+        justify-content:center;
+    }
 `

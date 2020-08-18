@@ -2,14 +2,14 @@ import React from 'react'
 
 import { Container } from './styles'
 import Header from '../../components/Header'
-import Card from '../../components/Card'
+import List from '../../containers/List'
 
 const Landing: React.FC = () => {
   return (
     <>
       <Container>
-        <Header></Header>
-        <Card></Card>
+        <Header/>
+        <List/>
       </Container>
     </>
   )
