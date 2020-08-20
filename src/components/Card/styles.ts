@@ -26,9 +26,22 @@ export const TextName = styled.h1`
     text-transform:capitalize;
 `
 
-export const PokemonImage = styled.img`
+type PokemonImageProps = {
+    frontUrl?: string
+    backUrl?: string
+}
+
+export const PokemonImage = styled.div<PokemonImageProps>`
     width: 9rem;
     height: 9rem;
+
+    background-size: cover;
+    background-position: center;
+    background-image: url( ${ props => props.frontUrl} );
+
+    &:hover {
+    background-image: url( ${ props => props.backUrl} );
+    }
 
     @media(max-width: 770px) {
         width: 9rem;

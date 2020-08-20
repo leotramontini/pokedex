@@ -21,7 +21,8 @@ const Card: React.FC<CardProps> = ({ url }) => {
             }
         ],
         sprites: {
-            front_default: ''
+            front_default: '',
+            back_default: ''
         }
     })
 
@@ -43,14 +44,14 @@ const Card: React.FC<CardProps> = ({ url }) => {
     return (
         <>
         <Container>
-            <TextName>{pokemon.name} -  # {pokemon.id}</TextName>
+            <TextName>{pokemon.name} -  #{pokemon.id}</TextName>
             <DescriptionContainer>
                 <TypesContainer>
                     { pokemon.types.map((type: any) => {
                         return getType(type)
                     })}
                 </TypesContainer>
-                <PokemonImage src={pokemon.sprites.front_default}/>
+                <PokemonImage frontUrl={pokemon.sprites.front_default} backUrl={pokemon.sprites.back_default}/>
             </DescriptionContainer>
         </Container>
         </>
