@@ -25,9 +25,9 @@ const List: React.FC = () => {
 
     return (
         <Container>
-            { pokemons.map((pokemnon: Pokemon) => {
+            { pokemons.map((pokemon: Pokemon) => {
                 return (
-                    <Card key={pokemnon.name} url={pokemnon.url}/>
+                    <Card key={pokemon.name} url={pokemon.url}/>
                 )
             })}
         </Container>
