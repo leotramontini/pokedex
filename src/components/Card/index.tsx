@@ -19,11 +19,7 @@ const Card: React.FC<CardProps> = ({ url }) => {
                     name: null
                 }
             }
-        ],
-        sprites: {
-            front_default: '',
-            back_default: ''
-        }
+        ]
     })
 
     async function getPokemon(url: string){
@@ -51,7 +47,7 @@ const Card: React.FC<CardProps> = ({ url }) => {
                         return getType(type)
                     })}
                 </TypesContainer>
-                <PokemonImage frontUrl={pokemon.sprites.front_default} backUrl={pokemon.sprites.back_default}/>
+                <PokemonImage src={`https://pokeres.bastionbot.org/images/pokemon/${pokemon.id}.png`}/>
             </DescriptionContainer>
         </Container>
         </>
