@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import api from 'services/api'
-
+import pokeballLoading from 'assets/pokeball-loading.gif'
 import { Container, PokemonImage, DescriptionContainer, TypesContainer, TypeItem, TextName } from './styles'
 
 interface CardProps {
@@ -33,6 +33,14 @@ const Card: React.FC<CardProps> = ({ url }) => {
         )
     }
 
+    const getUrl = () => {
+        if (pokemon.id == null) {
+            return pokeballLoading
+        }
+
+        return `https://pokeres.bastionbot.org/images/pokemon/${pokemon.id}.png`
+    }
+
     useEffect(() => {
         getPokemon(url)
     }, [])
@@ -44,10 +52,10 @@ const Card: React.FC<CardProps> = ({ url }) => {
             <DescriptionContainer>
                 <TypesContainer>
                     { pokemon.types.map((type: any) => {
-                        getType(type)
+                        return  getType(type)
                     })}
                 </TypesContainer>
-                <PokemonImage src={`https://pokeres.bastionbot.org/images/pokemon/${pokemon.id}.png`}/>
+                <PokemonImage src={getUrl()}/>
             </DescriptionContainer>
         </Container>
         </>
