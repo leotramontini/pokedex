@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import api from '../../services/api'
+import api from 'services/api'
 
 import { Container, PokemonImage, DescriptionContainer, TypesContainer, TypeItem, TextName } from './styles'
 
@@ -22,7 +22,7 @@ const Card: React.FC<CardProps> = ({ url }) => {
         ]
     })
 
-    async function getPokemon(url: string){
+    async function getPokemonl(url: string){
         const response = await api.get(url)
         setPokemon(response.data)
     }
@@ -34,8 +34,8 @@ const Card: React.FC<CardProps> = ({ url }) => {
     }
 
     useEffect(() => {
-        getPokemon(url)
-    })
+        getPokemonl(url)
+    }, [])
 
     return (
         <>
@@ -44,7 +44,7 @@ const Card: React.FC<CardProps> = ({ url }) => {
             <DescriptionContainer>
                 <TypesContainer>
                     { pokemon.types.map((type: any) => {
-                        return getType(type)
+                        getType(type)
                     })}
                 </TypesContainer>
                 <PokemonImage src={`https://pokeres.bastionbot.org/images/pokemon/${pokemon.id}.png`}/>

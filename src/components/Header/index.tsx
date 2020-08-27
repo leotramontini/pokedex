@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { TextLogo, Logo, Container } from './sytles'
-import pokeballLogo from '../../assets/pokeball-logo.png'
+import pokeballLogo from 'assets/pokeball-logo.png'
 
 const Header: React.FC = () => {
   return (

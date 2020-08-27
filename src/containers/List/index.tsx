@@ -1,8 +1,8 @@
 import React, { useState, useEffect }from 'react'
-import api from '../../services/api'
+import api from 'services/api'
 
 
-import Card from '../../components/Card'
+import Card from 'components/Card'
 import { Container } from './styles'
 
 interface Pokemon {
@@ -19,9 +19,9 @@ const List: React.FC = () => {
         setPokemons(response.data.results)
     }
 
-    useEffect(() => {
+    useEffect( () => {
         getPokemon()
-    })
+    }, [])
 
     return (
         <Container>
