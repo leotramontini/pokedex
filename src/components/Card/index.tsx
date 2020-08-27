@@ -22,7 +22,7 @@ const Card: React.FC<CardProps> = ({ url }) => {
         ]
     })
 
-    async function getPokemonl(url: string){
+    async function getPokemon(url: string){
         const response = await api.get(url)
         setPokemon(response.data)
     }
@@ -34,7 +34,7 @@ const Card: React.FC<CardProps> = ({ url }) => {
     }
 
     useEffect(() => {
-        getPokemonl(url)
+        getPokemon(url)
     }, [])
 
     return (
