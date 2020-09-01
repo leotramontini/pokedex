@@ -47,12 +47,12 @@ const Card: React.FC<CardProps> = ({ url }) => {
 
     return (
         <>
-        <Container>
+        <Container href={`${pokemon.id}`}>
             <TextName>{pokemon.name} -  #{pokemon.id}</TextName>
             <DescriptionContainer>
                 <TypesContainer>
                     { pokemon.types.map((type: any) => {
-                        return  getType(type)
+                        return getType(type)
                     })}
                 </TypesContainer>
                 <PokemonImage src={getUrl()}/>

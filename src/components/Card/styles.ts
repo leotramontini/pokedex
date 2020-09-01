@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 
-export const Container = styled.div`
+export const Container = styled.a`
+    color: #000;
+    text-decoration: none;
     width: 14rem;
     height: 14rem;
     margin: 1.0rem;
@@ -16,7 +18,7 @@ export const Container = styled.div`
         height: 16rem;
         margin: 1.0rem 0;
     }
-    
+    border: none;
     /* background-color: #D7D9D8; */
     background-color: ${props => props.color || '#D7D9D8'};
 `
