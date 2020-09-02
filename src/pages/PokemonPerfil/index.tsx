@@ -60,13 +60,13 @@ const PokemonPerfil:React.FC = () => {
         <>
             <Header/>
             <Container>
+                <PokemonImage src={getUrl()}/>
                 <TextContainer>
                     <PokemonName>
                         {pokemon.name} - # {pokemon.id}
                     </PokemonName>
                     {getStats()}
                 </TextContainer>
-                <PokemonImage src={getUrl()}/>
             </Container>
         </>
     )
