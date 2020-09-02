@@ -43,7 +43,7 @@ const Card: React.FC<CardProps> = ({ url }) => {
 
     useEffect(() => {
         getPokemon(url)
-    }, [])
+    }, [url])
 
     return (
         <>
