@@ -6,12 +6,10 @@ import List from 'containers/List'
 
 const Landing: React.FC = () => {
   return (
-    <>
-      <Container>
-        <Header/>
-        <List/>
-      </Container>
-    </>
+    <Container>
+      <Header/>
+      <List/>
+    </Container>
   )
 }
 

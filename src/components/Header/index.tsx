@@ -5,12 +5,10 @@ import pokeballLogo from 'assets/pokeball-logo.png'
 
 const Header: React.FC = () => {
   return (
-    <>
-      <Container>
-        <Logo src={pokeballLogo}/>
-        <TextLogo>Pokedex</TextLogo>
-      </Container>
-    </>
+    <Container>
+      <Logo src={pokeballLogo}/>
+      <TextLogo>Pokedex</TextLogo>
+    </Container>
   )
 }
 
