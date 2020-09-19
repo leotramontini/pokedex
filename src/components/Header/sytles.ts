@@ -8,12 +8,12 @@ export const TextLogo = styled.div`
   }
 `
 export const Container = styled.div`
-  width: 100vw;
   display: flex;
   margin-top: 1.5rem;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  width: calc(100vw - 10px);
 
 `
 
