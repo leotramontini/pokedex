@@ -56,8 +56,9 @@ export const TypeItem = styled.h1`
     text-align:center;
     font: 400 0.9rem PT Sans;
     text-transform:capitalize;
+    border: 1px solid #EFF1F0;
 
-    width: 3rem;
+    width: 3.4rem;
     border-radius:10%;
-    background-color: #EFF1F0;
+    background-color: ${props => props.color || '#EFF1F0'};
 `

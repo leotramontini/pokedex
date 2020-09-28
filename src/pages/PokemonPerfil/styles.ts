@@ -25,25 +25,46 @@ export const PokemonImage = styled.img`
 `
 
 export const TextContainer = styled.div`
-  width: 35rem;
-  
+  width: 50rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
   @media(max-width: 770px) {
-    width: 14rem;
+    width: calc(100vw - 5rem);
   }
 `
 
 export const PokemonName = styled.h1`
-  font: 400 5rem PT Sans;
+  font: 400 4rem PT Sans;
   text-transform:capitalize;
 
   @media(max-width: 770px) {
     font: 400 2rem PT Sans;
   }
-
 `
 
 export const StatsContainer = styled.div`
   display:flex;
+  flex-direction:column;
+  width: 100%;
+`
+
+export const TypeContainer = styled.div`
+  display:flex;
+  width: 100%;
+  flex-direction:row;
+  justify-content: space-around;
+`
+
+export const TypeItem = styled.div`
+  text-align:center;
+  font: 400 1.5rem PT Sans;
+  text-transform:capitalize;
+
+  width: 6rem;
+  border-radius: 10%;
+  background-color: ${props => props.color || '#EFF1F0'};
 `
 
 export const Stat = styled.h5`

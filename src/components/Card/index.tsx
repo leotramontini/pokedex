@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import api from 'services/api'
 import pokeballLoading from 'assets/pokeball-loading.gif'
 import { Container, PokemonImage, DescriptionContainer, TypesContainer, TypeItem, TextName } from './styles'
+import { ThemeDefault } from 'theme/themeDefault'
 
 interface CardProps {
     url: string;
@@ -16,7 +17,7 @@ const Card: React.FC<CardProps> = ({ url }) => {
             {
                 slot: null,
                 type: {
-                    name: null
+                    name: ''
                 }
             }
         ]
@@ -27,10 +28,17 @@ const Card: React.FC<CardProps> = ({ url }) => {
         setPokemon(response.data)
     }
 
-    const getType = (type: any) => {
-        return (
-            <TypeItem key={ type.slot }> { type.type.name } </TypeItem>
-        )
+    const getTypes = () => {
+        return  pokemon.types.map((type: any) => {
+            const typeName = type.type.name
+            const color = ThemeDefault.get(typeName)
+            return <TypeItem color={ color } key={ type.slot }> { typeName } </TypeItem>
+        })
+    }
+
+    const getBackgroundColor = () => {
+        const typeName = pokemon.types[0].type.name
+        return ThemeDefault.get(typeName)
     }
 
     const getUrl = () => {
@@ -47,13 +55,11 @@ const Card: React.FC<CardProps> = ({ url }) => {
 
     return (
         <>
-        <Container href={`${pokemon.id}`}>
+        <Container color={ getBackgroundColor() } href={`${pokemon.id}`}>
             <TextName>{pokemon.name} -  #{pokemon.id}</TextName>
             <DescriptionContainer>
                 <TypesContainer>
-                    { pokemon.types.map((type: any) => {
-                        return getType(type)
-                    })}
+                    { getTypes() }
                 </TypesContainer>
                 <PokemonImage src={getUrl()}/>
             </DescriptionContainer>

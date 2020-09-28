@@ -4,7 +4,8 @@ import { useParams } from "react-router"
 import api from 'services/api'
 import Header from 'components/Header'
 import pokeballLoading from 'assets/pokeball-loading.gif'
-import { Container, PokemonImage, TextContainer, PokemonName, Stat } from './styles'
+import { Container, PokemonImage, TextContainer, PokemonName, Stat, StatsContainer, TypeItem, TypeContainer} from './styles'
+import { ThemeDefault } from 'theme/themeDefault'
 
 
 const PokemonPerfil:React.FC = () => {
@@ -15,9 +16,9 @@ const PokemonPerfil:React.FC = () => {
         name: null,
         types: [
             {
-                slot: null,
+                slot: '',
                 type: {
-                    name: null
+                    name: ''
                 }
             }
         ],
@@ -51,6 +52,16 @@ const PokemonPerfil:React.FC = () => {
             )
         })
     }
+    
+    const getTypes = () => {
+        return  pokemon.types.map((type: any) => {
+            const typeName = type.type.name
+            const color = ThemeDefault.get(typeName)
+
+            return <TypeItem color={ color } key={ type.slot }> { typeName } </TypeItem>
+        })
+    }
+    
 
     useEffect(() => {
         getPokemon(id)
@@ -65,7 +76,12 @@ const PokemonPerfil:React.FC = () => {
                     <PokemonName>
                         {pokemon.name} - # {pokemon.id}
                     </PokemonName>
-                    {getStats()}
+                    <TypeContainer>
+                        { getTypes()}
+                    </TypeContainer>
+                    <StatsContainer>
+                        {getStats()}
+                    </StatsContainer>
                 </TextContainer>
             </Container>
         </>
