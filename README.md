@@ -1,44 +1,77 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Pokedex :video_game:
 
-## Available Scripts
+### Summary
 
-In the project directory, you can run:
+:small_blue_diamond: [Project Description](#project-description)
 
-### `yarn start`
+:small_blue_diamond: [Features](#features)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+:small_blue_diamond: [Requirements](#requirements)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+:small_blue_diamond: [Get Start](#get-start-running)
 
-### `yarn test`
+:small_blue_diamond: [Languages, dependecs and libs](#languages-dependecs-and-libs-books)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+## Project Description
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Development a simple pokedex to study ReactJS using typescript
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### Features
+- Pokemon List
+- Pokemon Perfil
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+> Project Status: Finish :heavy_check_mark:
 
-### `yarn eject`
+## Requirements 
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+:warning: [Node](https://nodejs.org/en/) :green_heart:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+:warning: [Npm](https://www.npmjs.com/) :rocket: 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+or 
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+:warning: [Yarn](https://classic.yarnpkg.com/) :rocket:
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Get Start :running:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Clone the project, in the project directory, you can run:
+
+```
+$ npm install
+```
+or 
+
+```
+$ yarn install
+```
+
+to install dependecies after run:
+
+```
+$ npm start
+```
+
+or
+
+```
+$ yarn start
+```
+
+to start application, open http://localhost:3000 to view it in the browser.
+
+
+## Languages, dependecs and libs :books:
+
+- [Node](https://www.php.net/)
+- [React](https://reactjs.org/)
+- [Axios](https://github.com/axios/axios)
+- [Styled Component](https://styled-components.com/)
+- [Typescript](https://www.typescriptlang.org/)
+
+## License
+
+The [MIT License]() (MIT)
+
+Copyright :copyright: 2020 - Pokedex
