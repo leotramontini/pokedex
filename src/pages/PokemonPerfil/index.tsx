@@ -3,8 +3,9 @@ import { useParams } from "react-router"
 
 import api from 'services/api'
 import Header from 'components/Header'
-import pokeballLoading from 'assets/pokeball-loading.gif'
-import { Container, PokemonImage, TextContainer, PokemonName, Stat, StatsContainer, TypeItem, TypeContainer } from './styles'
+import PokeballLoading from 'assets/pokeball-loading.gif'
+import LeftArrow from 'assets/left-arrow.svg'
+import { Container, PokemonImage, TextContainer, PokemonName, Stat, StatsContainer, TypeItem, TypeContainer, BackContainer, BackImage } from './styles'
 import { ThemeDefault } from 'theme/themeDefault'
 
 const PokemonPerfil:React.FC = () => {
@@ -38,7 +39,7 @@ const PokemonPerfil:React.FC = () => {
 
     const getUrl = () => {
         if (pokemon.id == null) {
-            return pokeballLoading
+            return PokeballLoading
         }
 
         return `https://pokeres.bastionbot.org/images/pokemon/${id}.png`
@@ -69,6 +70,9 @@ const PokemonPerfil:React.FC = () => {
     return (
         <>
             <Header/>
+            <BackContainer href="/">
+                <BackImage src={ LeftArrow }/>
+            </BackContainer>
             <Container>
                 <PokemonImage src={getUrl()}/>
                 <TextContainer>

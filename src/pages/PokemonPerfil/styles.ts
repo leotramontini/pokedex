@@ -75,5 +75,16 @@ export const Stat = styled.h5`
   min-width: 20rem;
   font: 400 1.3rem PT Sans;
   text-transform:capitalize;
+`
 
+export const BackContainer = styled.a `
+  display:flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items:center;
+  margin: 0 0 1.5rem 1.5rem;
+`
+
+export const BackImage = styled.img`
+  width: 1.5rem;
 `
