@@ -13,7 +13,7 @@
 :small_blue_diamond: [Languages, dependecs and libs](#languages-dependecs-and-libs-books)
 
 
-## Project Description
+### Project Description
 
 Development a simple pokedex to study ReactJS using typescript
 
@@ -23,7 +23,7 @@ Development a simple pokedex to study ReactJS using typescript
 
 > Project Status: Finish :heavy_check_mark:
 
-## Requirements 
+### Requirements 
 
 :warning: [Node](https://nodejs.org/en/) :green_heart:
 
@@ -34,7 +34,7 @@ or
 :warning: [Yarn](https://classic.yarnpkg.com/) :rocket:
 
 
-## Get Start :running:
+### Get Start :running:
 
 Clone the project, in the project directory, you can run:
 
@@ -62,7 +62,7 @@ $ yarn start
 to start application, open http://localhost:3000 to view it in the browser.
 
 
-## Languages, dependecs and libs :books:
+### Languages, dependecs and libs :books:
 
 - [Node](https://www.php.net/)
 - [React](https://reactjs.org/)
