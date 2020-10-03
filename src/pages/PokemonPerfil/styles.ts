@@ -46,8 +46,11 @@ export const PokemonName = styled.h1`
 
 export const StatsContainer = styled.div`
   display:flex;
-  flex-direction:column;
-  width: 100%;
+  flex-wrap: wrap;
+  max-width: 100vw;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
 `
 
 export const TypeContainer = styled.div`
@@ -68,6 +71,9 @@ export const TypeItem = styled.div`
 `
 
 export const Stat = styled.h5`
-  font: 400 1rem PT Sans;
+  flex-wrap: wrap;
+  min-width: 20rem;
+  font: 400 1.3rem PT Sans;
   text-transform:capitalize;
+
 `

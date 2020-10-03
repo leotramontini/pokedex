@@ -4,9 +4,8 @@ import { useParams } from "react-router"
 import api from 'services/api'
 import Header from 'components/Header'
 import pokeballLoading from 'assets/pokeball-loading.gif'
-import { Container, PokemonImage, TextContainer, PokemonName, Stat, StatsContainer, TypeItem, TypeContainer} from './styles'
+import { Container, PokemonImage, TextContainer, PokemonName, Stat, StatsContainer, TypeItem, TypeContainer } from './styles'
 import { ThemeDefault } from 'theme/themeDefault'
-
 
 const PokemonPerfil:React.FC = () => {
     let { id } = useParams();
@@ -48,7 +47,7 @@ const PokemonPerfil:React.FC = () => {
     const getStats = () => {
         return pokemon.stats.map((stat: any) => {
             return (
-                <Stat>{stat.stat.name}: {stat.base_stat}</Stat>
+                <Stat key={ stat.stat.name }>{stat.stat.name}: {stat.base_stat}</Stat>
             )
         })
     }
@@ -74,13 +73,13 @@ const PokemonPerfil:React.FC = () => {
                 <PokemonImage src={getUrl()}/>
                 <TextContainer>
                     <PokemonName>
-                        {pokemon.name} - # {pokemon.id}
+                        { pokemon.name } - # { pokemon.id }
                     </PokemonName>
                     <TypeContainer>
                         { getTypes()}
                     </TypeContainer>
                     <StatsContainer>
-                        {getStats()}
+                        { getStats() }
                     </StatsContainer>
                 </TextContainer>
             </Container>
