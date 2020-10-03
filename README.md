@@ -1,4 +1,4 @@
-### Pokedex :video_game:
+## Pokedex :video_game:
 
 ### Summary
 
